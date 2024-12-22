@@ -5,45 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" href="favicon.ico">
+    <link rel = "stylesheet" href="style.css">
 </head>
 <body>
     <!--шапка страницы-->
     <header>
-        <img src="images/gelik.jpeg" alt="logotype" style="height: 100px; width: 100px;">
-        <p>Группа ЭФБО-04-23</p>
-        <p>Жирнов Николай Валерьевич</p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <img src="images/gelik.jpeg" alt="logotype" style="height: 100px; width: 100px;">
+            <div style="display: flex; flex-direction: column;"></div>
+                <p>Группа ЭФБО-04-23</p>
+                <p>Жирнов Николай Валерьевич</p>
+            </div>
+        </div>
     </header>
 
     <!--навигационный бар-->
-
-    <ul>
-        <li>Главная</li>
-        <li><a href="index.html">Первый семестр</a></li>
-        <li><a href="index1.html">Второй семестр</a></li>
-        <li>Услуги</li>
-        <li>Авторизация</li>
-    </ul>
-
-    <!-- панелька с ссылками на элементы этой же страницы-->
-
-    <div style="display: flex;">
-        <aside>
-            <p>Навигация по странице</p>
-            <a href="#frontend">Фронтенд</a>
-            <a href="#backend">Бэкенд</a>
-        </aside>
+    <div>
+        <ul style="display: flex; flex-direction: row;align-items: center;justify-content: flex-start; column-gap: 25px; list-style-type: none;">
+            <li>Главная</li>
+            <li><a href="index.html">Первый семестр</a></li>
+            <li><a href="index1.html">Второй семестр</a></li>
+            <li><a href="attendance.html">Услуги</a></li>
+            <li>Авторизация</li>
+        </ul>
     </div>
 
-    <!--основная часть страницы-->
-    <main>
-        <h1>Добро пожаловать на мой сайт</h1>
-            <p>Меня зовут Николай Жирнов и я начинающий специалист по веб-разработке.</p>
-            <img src="images/gelik.jpeg" alt="logotype" style="height: 100px; width: 100px;">
-            <h2 id="frontend">Фронтенд</h2>
-            <p>Фронтенд (или клиентская часть) - это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать интерактивные и привлекательные интерфейсы. Основная задача фронтенда - обеспечить удобство использования и эстетическую привлекательность.</p>
-            <h2 id="backend">Бэкенд</h2>
-            <p>Бэкенд (или серверная часть) — это «за кулисами» веб-приложения. Он отвечает за обработку данных, управление пользователями и взаимодействие с базами данных. Бэкенд-разработчики используют языки программирования, такие как Python, Ruby, Java или PHP, а также фреймворки и базы данных для создания логики приложения. Основная задача бэкенда — обеспечить стабильную работу приложения и безопасность данных.</p>
-    </main>
+    <!--боковая панелька с ссылками на элементы этой же страницы-->
+    <div style="display: flex;">
+        <aside style="padding-right: 10px; width: 25%;">
+            <p>Навигация по странице</p>
+            <div style="display: flex; flex-flow: column;">
+                <a href="#frontend">Фронтенд</a>
+                <a href="#backend">Бэкенд</a>
+            </div>
+        </aside>
+        <!--основная часть страницы-->
+        <main>
+            <h1>Добро пожаловать на мой сайт</h1>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <p>Меня зовут Жирнов Николай Валерьевич и я начинающий специалист по веб-разработке.</p>
+                <img src="images/fera.webp" alt = "Cool porsche 911" style="width: 25%;">
+            </div>
+
+                <h2 id="frontend">Фронтенд</h2>
+                <p>Фронтенд (или клиентская часть) - это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать интерактивные и привлекательные интерфейсы. Основная задача фронтенда - обеспечить удобство использования и эстетическую привлекательность.</p>
+                <video controls width="720"><source src="videos/firstVideo.webm" type="video/webm"></video>
+            
+                <h2 id="backend">Бэкенд</h2>
+                <p>Бэкенд (или серверная часть) — это «за кулисами» веб-приложения. Он отвечает за обработку данных, управление пользователями и взаимодействие с базами данных. Бэкенд-разработчики используют языки программирования, такие как Python, Ruby, Java или PHP, а также фреймворки и базы данных для создания логики приложения. Основная задача бэкенда — обеспечить стабильную работу приложения и безопасность данных.</p>
+                <video controls width="720"><source src="videos/secondVideo.webm" type="video/webm"></video>
+        </main>
+    </div>
+
+    <button class="back-to-top hidden">Back To Top</button>
+    <script src="topbutton.js"></script>
 
     <!--нижний колонтитул страницы-->
     <footer>

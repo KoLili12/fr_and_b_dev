@@ -10,66 +10,154 @@
 <body>
     <!--шапка страницы-->
     <header>
-        <img src="images/fera.webp" alt="logotype" style="height: 100px; width: 100px;">
-        <p>Группа ЭФБО-04-23</p>
-        <p>Жирнов Николай Валерьевич</p>
+        <div id="siteHeader">
+            <img src="images/fera.webp" alt="logotype" style="height: 75px; width: 75px;">
+            <p>Группа ЭФБО-04-23</p>
+            <p>Жирнов Николай Валерьевич</p>
+        </div>
+    </header>
 
-
-        <!--навбар-->
+        <!--навигационный бар-->
         <div>
-            <ul>
+            <ul style="display: flex; flex-direction: row;align-items: center;justify-content: flex-start; column-gap: 25px; list-style-type: none;">
                 <li>Главная</li>
                 <li><a href="index.html">Первый семестр</a></li>
                 <li><a href="index1.html">Второй семестр</a></li>
-                <li>Услуги</li>
+                <li><a href="attendance.html">Услуги</a></li>
                 <li>Авторизация</li>
             </ul>
         </div>
 
         <!--панелька с ссылками на элементы этой же страницы-->
-        <aside style="padding-right: 10px; width: 25%;">
-             <p>Навигация по странице</p>
-            <a href="#landingpage">Сайт-визитка</a>
-            <a href="#corpwebsite">Корпоративный сайт</a>
-            <a href="#shop">Интернет-магазин</a>
-         </aside>
+        <div style="display: flex;">
+            <aside style="padding-right: 10px; width: 30%;">
+                <p>Навигация по странице</p>
+                <div style="display: flex; flex-flow: column;" id="asideElements">
+                    <a href="#landingpage" class="link">Сайт-визитка</a>
+                    <a href="#corpwebsite" class="link">Корпоративный сайт</a>
+                    <a href="#shop" class="link">Интернет-магазин</a>
+                </div>
+            </aside>
 
 
 
-        <!--основная часть страницы-->
-        <main>
-            <h1>Разработка веб-приложений</h1>
+            <!--основная часть страницы-->
+            <main>
+                <h1>Разработка веб-приложений</h1>
+
+                <div class="grid-container">
+
+                    <div class="itemCards" style="display: flex; flex-flow: column; justify-content: center; align-items: center;">
+                        <img src="images/porsheBlack.jpg" alt="landig page screenshot" style="width: 70%;">
+                        <p style="text-align: center;">Сайт-визитка</p>
+                        <button id="openModal" class="orderButton">Заказать</button>
+                    </div>
+
+                    <div class="itemCards" style="display: flex; flex-flow: column; justify-content: center;align-items: center;">
+                        <img src="images/porsheGold.jpeg" alt="corporative website screenshot" style="width: 70%;">
+                        <p style="text-align: center;">Корпоративный сайт</p>
+                        <button id="openModal1" class="orderButton">Заказать</button>
+                    </div>
+
+                    <div class="itemCards" style="display: flex; flex-flow: column; justify-content: center;align-items: center;">
+                        <img src="images/porsheGreen.jpeg" alt="Internet shop website screenshot" style="width: 70%;">
+                        <p style="text-align: center;">Интернет-магазин</p>
+                        <button id="openModal2" class="orderButton">Заказать</button>
+                    </div>
+                </div>
+
+                
+                <h2 id="landingpage">Сайт-визитка</h2>
+                <p class="article">Сайт-визитка – идеальное решение для компаний, которые хотят представить себя в Интернете и установить контакт с потенциальными клиентами. Я разработаю для вас стильный и лаконичный сайт, который отразит суть вашего бизнеса и выделит его среди конкурентов. Сайт-визитка включает в себя основные страницы, такие как "О компании", "Услуги", "Контакты", и может быть дополнен портфолио и отзывами клиентов.</p>
+
+                <h2 id="corpwebsite">Корпоративный сайт</h2>
+                <p class="article">Корпоративный сайт – это ваше лицо в интернете, мощный инструмент для взаимодействия с партнерами и клиентами. Я помогу вам создать удобную платформу для представления вашего бизнеса, услуг и продуктов, а также для привлечения новых клиентов. Корпоративный сайт может включать в себя расширенный функционал, такие как личные кабинеты, интеграция с CRM-системами и многое другое.</p>
+
+                <h2 id="shop">Интернет-магазин</h2>
+                <p class="article">Интернет-магазин – это ваша возможность выйти на новый уровень продаж и привлечь широкую аудиторию покупателей. Я разработаю для вас интернет-магазин с удобной навигацией, функциональным каталогом товаров и интеграцией с платежными системами. Мы обеспечим максимальное удобство для ваших клиентов, что повысит их лояльность и увеличит количество продаж.</p>
+                
+            </main>
+        </div>
+
+                <!--нижний колонтитул страницы-->
+                <footer>
+                    <address> 
+                        Контакты для связи <a href="nickzhirnoff@gmail.com.com">Николай Жирнов</a>.
+                    </address>
+                    <p>© copyright 2024</p>
+                </footer>
+
+        
+        <div id="modal">
+            <div id = "formBody">
+                <div style="display: flex; flex-direction: column; row-gap: 15px; padding-left: 15px;">
+                    <div style="display: flex;flex-direction: row;align-items: center; column-gap: 10px;">
+                        <h2>Форма обратной связи</h2>
+                        <p class = "close">Закрыть</p>
+                    </div>
+
+                    <p id="selectedService"></p>
+
+                    <form id="contactForm" action="thanks.html" method="get" style="display: flex; flex-direction: column; row-gap: 6px;">
+                        <!-- Поле для ввода имени -->
+                        <div style="display: flex;flex-direction: row;align-items: flex-end;justify-content: flex-start;">
+                            <label for="name">Имя:</label>
+                            <input type="text" id="name" name="name" class="formLabel" required>
+                        </div>
+
+                        <!-- Поле для ввода электронной почты -->
+                        <div style="display: flex;flex-direction: row;align-items: flex-end;justify-content: flex-start;">
+                            <label for="email">Электронная почта:</label>
+                            <input type="email" id="email" name="email" class="formLabel" required>
+                        </div>
+
+                        <!-- Поле для ввода телефона -->
+                        <div style="display: flex;flex-direction: row;align-items: flex-end;justify-content: flex-start;">
+                            <label for="phone">телефон:</label>
+                            <input type="tel" id="phone" name="phone" class="formLabel" required>          
+                        </div>
+
+                         <!-- Поле для указания страны -->
+                        <div>
+                            <label for="country">страна:</label>
+                            <select id="country" name="country" required>
+                                <option value="">-----</option>
+                                <option value="ru">Россия</option>
+                                <option value="kz">Казахстан</option>
+                            </select>
+                        </div>
+                        
+                         <!-- Поле для ввода даты -->
+                        <div style="display: flex;flex-direction: row;align-items: flex-end;justify-content: flex-start;">
+                             <label for="date">Дата:</label>
+                             <input type="date" id="date" required>
+                        </div>
+
+                        <!-- Многострочное текстовое поле для комментариев -->
+                        <div style="display: flex;flex-direction: row;align-items: flex-end;justify-content: flex-start;">
+                            <label for="comments">Комментарии:</label>
+                            <textarea id="comments" name="comments" class="formLabel"></textarea>
+                        </div>
+
+                         <!-- Согласие со всем -->
+                          <div>
+                            <input type="checkbox" id="chkbox" name="chkbox" required>
+                            <label for="chkbox">я согласен на обработку моих персональных данных</label>
+                          </div>
 
 
-            <div>
-                <img src="images/porsheGold.jpeg" alt="landig page screenshot" style="width: 30%;">
-                <p style="text-align: center;">Сайт-визитка</p>
-                <button id="openModal1" onclick="location.href = 'order.html'" >Заказать</button>
+                        <!-- Кнопка отправки формы -->
+                        <button type="submit" class="orderButton">Отправить</button>
+                    </form>
+                </div>
             </div>
+        </div>
 
-            <div>
-                <img src="images/porsheGreen.jpeg" alt="corporative website screenshot" style="width: 30%;">
-                <p style="text-align: center;">Корпоративный сайт</p>
-                <button id="openModal1" onclick="location.href = 'order.html'">Заказать</button>
-            </div>
+        <button class="back-to-top hidden">Back To Top</button>
+        <script src="topbutton.js"></script>
 
-            <div>
-                <img src="images/porsheBlack.jpg" alt="Internet shop website screenshot" style="width: 30%;">
-                 <p style="text-align: center;">Интернет-магазин</p>
-                 <button id="openModal2" onclick="location.href = 'order.html'">Заказать</button>
-            </div>
+    <script src="script.js"></script> <!-- Подключаем JavaScript -->
 
 
-            <h2 id="landingpage">Сайт-визитка</h2>
-            <p>Сайт-визитка – идеальное решение для компаний, которые хотят представить себя в Интернете и установить контакт с потенциальными клиентами. Я разработаю для вас стильный и лаконичный сайт, который отразит суть вашего бизнеса и выделит его среди конкурентов. Сайт-визитка включает в себя основные страницы, такие как "О компании", "Услуги", "Контакты", и может быть дополнен портфолио и отзывами клиентов.</p>
-
-            <h2 id="corpwebsite">Корпоративный сайт</h2>
-            <p>Корпоративный сайт – это ваше лицо в интернете, мощный инструмент для взаимодействия с партнерами и клиентами. Я помогу вам создать удобную платформу для представления вашего бизнеса, услуг и продуктов, а также для привлечения новых клиентов. Корпоративный сайт может включать в себя расширенный функционал, такие как личные кабинеты, интеграция с CRM-системами и многое другое.</p>
-
-            <h2 id="shop">Интернет-магазин</h2>
-            <p>Интернет-магазин – это ваша возможность выйти на новый уровень продаж и привлечь широкую аудиторию покупателей. Я разработаю для вас интернет-магазин с удобной навигацией, функциональным каталогом товаров и интеграцией с платежными системами. Мы обеспечим максимальное удобство для ваших клиентов, что повысит их лояльность и увеличит количество продаж.</p>
-        </main>
-    </header>
-<script src="script.js"></script> <!-- Подключаем JavaScript -->
-</body>
+    </body>
 </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task</title>
+    <script src="sc.js" defer></script>
+</head>
+<body>
+<div class="task11-firshalf">
+    <h1>Старый заголовок</h1>
+    <h2>Второй заг</h2>
+    <p>Это текст первого параграфа.</p>
+    <iframe src="https://www.youtube.com/embed/example" width="560" height="315"></iframe>
+    <script>
+        const h1 = document.querySelector("h1");
+        h1.textContent = "Добро пожаловать на cайт!";
+
+        const h2 = document.querySelector("h2");
+        h2.style.color = "red";
+
+        const firstParagraph = document.querySelector("p");
+        firstParagraph.textContent = "Это новый текст параграфа.";
+
+        const iframe = document.querySelector("iframe");
+        iframe.style.display = "none";
+    </script>
+</div>
+<div class="task11-secondhalf">
+    <form id="contactForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" name="phone">
+        <br>
+        <label for="date">Дата:</label>
+        <input type="date" id="date" name="date">
+        <br>
+        <label for="comment">Комментарий:</label>
+        <textarea id="comment" name="comment" required></textarea>
+        <br>
+        <br>
+        <label for="pole">поле</label>
+        <textarea id="pole" name="поле" required></textarea>
+        <br>
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+<div class="12task">
+    <h1 id="welcome">welcome</h1>
+    <div class="content">
+        <p>Абзац</p>
+    </div>
+</div>
+<div class="13task">
+    <h1 id="practice">Практические занятия</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>№</th>
+            <th>Темы первого семестра</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr><td>1</td><td>HTML и CSS</td></tr>
+        <tr><td>2</td><td>Основы JavaScript</td></tr>
+        <tr><td>3</td><td>Работа с DOM</td></tr>
+        <tr><td>4</td><td>Обработчики событий</td></tr>
+        </tbody>
+    </table>
+
+    <button id="change">Посмотреть практики</button>
+
+    <h2>Фотография</h2>
+    <img id="photo" src="porshe.jpg" alt="Фото" width="200" height="200">
+</div>
+<div class="14task">
+    <h1 id="paragraf" style="position: relative; text-align: center; margin: 0;">Параграф</h1>
+    <p id="text">бла-бла-бла</p>
+    <button id="showLectures">Показать лекции</button>
+    <table id="lecturesTable" style="display: none;">
+        <tr><td>Лекция 1</td></tr>
+        <tr><td>Лекция 2</td></tr>
+        <tr><td>Лекция 3</td></tr>
+    </table>
+    <form id="form2">
+        <input type="text" placeholder="Введите имя" required>
+        <input type="email" placeholder="Введите email" required>
+        <button type="submit">Отправить</button>
+    </form>
+    <div id="formMessasge" style="display: none;">Форма отправлена!</div>
+</div>
+<script src="sc1.js"></script>
+</body>
+</html>
+
