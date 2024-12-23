@@ -17,14 +17,13 @@ function toggleVisibility(selector) {
     }
 }
 
-// Функция извлечения значения параметра utm_term из URL
-function updateHeadingFromUTM() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const utmTerm = urlParams.get("utm_term");
-    const h1 = document.getElementById("welcome");
-    if (h1 && utmTerm) {
-        h1.textContent = utmTerm;
-    }
+function logCurrentTime() {
+    document.addEventListener('DOMContentLoaded', () => {
+        const [navigation] = performance.getEntriesByType('navigation');
+        const loadTime = navigation.loadEventEnd - navigation.startTime;
+        const loadTimeInSeconds = (loadTime / 1000).toFixed(2);
+        alert("Время загрузки страницы:" + loadTimeInSeconds + "секунд");
+    });
 }
 
 // Функция вывода текущего времени в консоль
