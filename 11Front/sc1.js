@@ -26,17 +26,6 @@ function logCurrentTime() {
     });
 }
 
-// Функция вывода текущего времени в консоль
-function logCurrentTime() {
-    document.addEventListener('DOMContentLoaded', () => {
-        const [navigation] = performance.getEntriesByType('navigation');
-        const loadTime = navigation.loadEventEnd - navigation.startTime;
-        const loadTimeInSeconds = (loadTime / 1000).toFixed(2);
-        alert("Время загрузки страницы: &{loadTimeInSeconds} секунд");
-    });
-
-}
-
 // Функция сброса цвета фона к исходному
 function resetBackgroundColor() {
     document.body.style.backgroundColor = "white";
